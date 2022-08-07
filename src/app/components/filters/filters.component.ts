@@ -11,8 +11,8 @@ export class FiltersComponent implements OnInit {
   arrPort:number[] = [];
   nameType = new FormControl("");
   nameShipSearch = new FormControl("");
-  shipName: string = "";
-  homePorts: string = ''; // totкавычки и запятые
+  shipName: string = '';
+  homePorts: string = '';
   portValue = [
     { id: 1, selected: false, port: 'Port Canaveral' },
     { id: 2, selected: false, port: 'Port of Los Angeles' },
