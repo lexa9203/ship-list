@@ -1,0 +1,33 @@
+<div class="container" *ngIf="!loading">
+    <button class="btn__card" (click)="goHome()">Вернуться</button>
+    <h1 class="title__ship">{{ ship.name}}</h1>
+    <div class="wrapper__info">
+        <div class="wrap__row">
+            <div>
+                <span class="ship__subtitle">Тип</span>
+                <span class="ship__info">{{ ship.type || '-' }}</span>
+            </div>
+            <div>
+                <span class="ship__subtitle">Порт</span>
+                <span class="ship__info">{{ ship.home_port }}</span>
+            </div>
+        </div>
+        <div class="wrap__row">
+            <div>
+                <span class="ship__subtitle">Вес</span>
+                <span class="ship__info">{{ ship.weight_kg }} <span *ngIf="ship.weight_kg">кг</span> </span>
+            </div>
+            <div>
+                <span class="ship__subtitle">Год</span>
+                <span class="ship__info">{{ ship.year_built }}</span>
+            </div>
+        </div>
+        <div class="mission">
+            <p class="ship__subtitle">Миссии</p>
+            <p class="ship__info">
+                {{ missions }}
+            </p>
+        </div>
+    </div>
+</div>
+  

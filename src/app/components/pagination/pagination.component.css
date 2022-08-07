@@ -1,0 +1,12 @@
+.page {
+    padding: 0 26px;
+}
+
+button{
+    background-color: white;
+    color: black;
+}
+
+button:hover {
+    color: #347CFF;
+}

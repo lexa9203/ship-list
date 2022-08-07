@@ -1,0 +1,35 @@
+<p class="title title__search">Фильтры</p>
+<div class="tooltip-hide">
+    <div *ngIf="shipName?.length" class="tooltip">Название</div>
+    <input [formControl]="nameShipSearch" [(ngModel)]="shipName" class="search__input" placeholder="Название" type="text" (input)="search($event)">
+</div>
+<div class="dropdown-checkbox">
+    <p *ngIf="arrPort.length === 0" class="label-title">Порт</p>
+    <p *ngIf="arrPort.length > 0" class="tooltip__port">Порт</p>
+    <p *ngIf="arrPort.length > 0" class="label-title">Выбраны {{arrPort.length}}</p>
+    <ul>
+        <li *ngFor="let port of portValue"> 
+            <input type="checkbox" [checked]="port.selected" [id]="port.id" (click)="change($event)" value="{{port.port}}">
+            <label [for]="port.id">{{port.port}}</label>
+        </li>
+    </ul>
+</div>
+<div class="wrap__type">
+    <p class="subtitle__type">Тип</p>
+    <div>
+        <input [formControl]="nameType"  type="radio" value="Barge" (click)="select($event)" id="id1">
+        <label for="id1">Barge</label>
+    </div>
+    <div>
+        <input [formControl]="nameType" type="radio" value="Cargo" (click)="select($event)" id="id2">
+        <label for="id2">Cargo</label>
+    </div>
+    <div>
+        <input [formControl]="nameType" type="radio" value="High Speed Craft" (click)="select($event)" id="id3">
+        <label for="id3">High Speed Craft</label>
+    </div>
+    <div>
+        <input [formControl]="nameType" type="radio" value="Tug" (click)="select($event)" id="id4">
+        <label for="id4">Tug</label>
+    </div>
+</div>

@@ -1,0 +1,119 @@
+.title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 64px;
+    font-weight: 400;
+}
+
+.title__search {
+    margin-bottom: 48px;
+    color: black;
+}
+
+.tooltip-hide{
+    position: relative;
+}
+  
+.tooltip{
+    display: block;
+    position: absolute;
+    top:-18px;
+    left: 0;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.search__input {
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #A5A5A5;
+    margin-bottom: 41px;
+    caret-color: #2962FF;
+}
+
+.search__input:focus{
+      border-bottom: 1px solid #2962FF;
+}
+
+.search__input::placeholder {
+      font-size: 16px;
+      color: rgba(0, 0, 0, 0.4);
+}
+
+.dropdown-checkbox {
+    position: relative;
+}
+
+.dropdown-checkbox .tooltip__port{
+    position: absolute;
+    top:-18px;
+    left: 0;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.4);
+}
+  
+.dropdown-checkbox .label-title {
+    font-size: 16px;
+    border-bottom: 1px solid #A5A5A5;
+    padding-bottom: 7px;
+}
+  
+.dropdown-checkbox .label-title:hover {
+    border-bottom: 1px solid #2962FF;
+}
+
+.dropdown-checkbox ul {
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+    display: none;
+    z-index: 1;
+    border: 1px solid #9c9c9c;
+}
+  
+.dropdown-checkbox ul li {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+    margin: 0px;
+}
+  
+.dropdown-checkbox ul li input {
+    margin-right: 10px;
+}
+  
+.dropdown-checkbox:hover ul {
+    display: block;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.23), 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+  
+.dropdown-checkbox:hover {
+    margin-bottom: 150px;    
+}
+
+.wrap__type>div {
+    margin-bottom: 20px;
+}
+  
+.wrap__type>div>input {
+    margin-right: 28px;
+    width: 16px;
+    height: 16px;
+}
+
+.subtitle__type {
+    margin: 24px 0;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 980px){
+    .wrap__type>div>input {
+        margin-right: 16px;
+    }
+}

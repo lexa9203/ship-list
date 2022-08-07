@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="list__ships">
+            <h1 class="title">SpaceX Ships</h1>
+            <div *ngIf="ships">
+                <div class="ship__item" *ngFor="let ship of ships">
+                    <app-ship-item [ship]="ship"></app-ship-item>
+                </div>
+                <div class="pagination">
+                    <app-pagination [page]="page" [maxPage]="maxPage" (nextPage)="next($event)" (prevPage)="prev($event)"></app-pagination>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <app-filters (selectType)="select($event)" (searchName)="search($event)" (changePort)="onChangePort($event)"></app-filters>
+        </div>
+    </div>
+</div>

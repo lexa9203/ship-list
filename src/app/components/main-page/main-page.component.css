@@ -1,0 +1,67 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list__ships {
+    width: 1527px;
+    border-right: 1px solid #A5A5A5;
+    padding: 50px 64px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 64px;
+}
+
+.ship__item {
+    border-bottom: 1px solid #A5A5A5;
+    margin-top: 40px;
+}
+
+.search {
+    width: 393px;
+    min-height: 100vh;
+    padding: 50px 32px;
+    background-color: #FFF;
+}
+
+.pagination{
+  margin-top: 52px;
+}
+
+@media screen and (max-width: 1070px) {
+    .search{
+      padding: 50px 15px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .search {
+      min-width: 200px;
+      padding: 50px 10px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper{
+      flex-direction: column-reverse;
+    }
+    .list__ships {
+      width: 100%;
+      border-right: none;
+      border-top: 1px solid #A5A5A5;
+    }
+    .search {
+      width: 100%;
+      padding: 50px 64px;
+    }
+  }
+  
+@media screen and (max-width: 640px) {
+    .search, .list__ships {
+      padding: 30px 24px;
+    }
+}

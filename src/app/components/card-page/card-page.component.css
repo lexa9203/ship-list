@@ -1,0 +1,87 @@
+.container {
+    padding: 50px 64px;
+}
+
+.btn__card{
+    color: #2962FF;
+    font-size: 14px;
+    background-color: transparent;
+    margin-bottom: 22px;
+}
+
+.btn__card:before{
+    content: "←";
+    padding-right: 7px;
+}
+
+.title__ship{
+    font-weight: 500;
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 53px;
+}
+
+.wrap__row{
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.wrap__row>div:nth-child(even){
+    position: absolute;
+    left: 453px;
+}
+
+.ship__subtitle{
+    display: inline-block;
+    min-width: 37px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-right: 104px;
+}
+
+.ship__info{
+    color: #2962FF;
+}
+
+.mission>.ship__subtitle{
+    margin-bottom: 22px;
+}
+
+.mission>.ship__info{
+    max-width: 710px;
+    line-height: 32px;
+}
+
+@media screen and (max-width: 870px) {
+    .wrap__row>div:nth-child(even){
+        left: 50%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .ship__subtitle{
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+      padding: 30px 24px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .wrap__row>div:nth-child(even){
+        position: static;
+    }
+    .wrap__row{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    .wrap__row>div{
+        margin-bottom: 30px;
+    }
+    .mission {
+        margin-top: 30px;
+    }
+}
