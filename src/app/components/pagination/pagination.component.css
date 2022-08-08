@@ -10,3 +10,8 @@ button{
 button:hover {
     color: #347CFF;
 }
+
+button:disabled {
+    color: #d0d0d0;
+    cursor: default;
+}

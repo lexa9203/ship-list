@@ -23,10 +23,6 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.shipQuery = this.appService.getData(this.pageSize, '', '', this.type);
-    this.shipQuery.valueChanges.subscribe(res => {
-      this.ships = res.data.shipsResult.data;
-      this.maxPage = Math.ceil(res.data.shipsResult.result.totalCount / this.pageSize);
-    })
   }
 
   onChangePort(event: string){

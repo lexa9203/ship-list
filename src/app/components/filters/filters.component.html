@@ -1,7 +1,7 @@
 <p class="title title__search">Фильтры</p>
 <div class="tooltip-hide">
     <div *ngIf="shipName?.length" class="tooltip">Название</div>
-    <input [formControl]="nameShipSearch" [(ngModel)]="shipName" class="search__input" placeholder="Название" type="text" (input)="search($event)">
+    <input [formControl]="nameShipSearch" class="search__input" placeholder="Название" type="text" (input)="search($event)">
 </div>
 <div class="dropdown-checkbox">
     <p *ngIf="arrPort.length === 0" class="label-title">Порт</p>

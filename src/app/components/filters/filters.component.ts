@@ -27,12 +27,14 @@ export class FiltersComponent implements OnInit {
 
   ngOnInit(): void {
     const res = JSON.parse(localStorage.getItem('filters')!);
-    this.nameType.setValue(res.type);
-    this.selectType.emit(this.nameType.value);
-    this.shipName = res.name;
-    this.search(this.shipName);
-    this.homePorts = res.home_port;
-    this.changePort.emit(this.homePorts);
+    if(res) {
+      this.nameType.setValue(res.type);
+      this.nameShipSearch.setValue(res.name);
+      this.homePorts = res.home_port;
+      this.selectType.emit(this.nameType.value);
+      this.searchName.emit(this.nameShipSearch.value);
+      this.changePort.emit(this.homePorts);
+    }
   
     this.homePorts
       .split('|')
